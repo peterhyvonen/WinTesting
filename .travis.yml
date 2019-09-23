@@ -5,6 +5,7 @@ script:
   - python --version
   - choco install python3 --pre 
   - refreshenv
+  - dir C:\
   - python3 --version
 # clone and install connector plugin
   - git clone https://github.com/tableau/connector-plugin-sdk.git
@@ -16,7 +17,7 @@ script:
 # download tableau desktop
   - pwd
   - powershell src/helper-scripts/powershell-test.ps1
-  - powershell 'Invoke-WebRequest -Uri https://www.tableau.com/downloads/desktop/pc64/TableauDesktop-64bit-2019-3-0.exe -OutFile TableauDesktop-64bit-2019-3-0.exe'
+  - powershell Invoke-WebRequest -Uri https://www.tableau.com/downloads/desktop/pc64/TableauDesktop-64bit-2019-3-0.exe -OutFile TableauDesktop-64bit-2019-3-0.exe
   - dir
 # databricks test
   #- psql -c '\l' -U postgres
