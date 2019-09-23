@@ -1,6 +1,6 @@
 os: win
 sudo: false
-language: powershell
+package: powershell
 #install:
 #before_script:
  # - 
@@ -17,10 +17,11 @@ script:
 # download tableau desktop
   #bitsadmin /addfile thisissomejobname http://kakao.ro/Pictures.iso C:\john_pictures.iso
   #- bitsadmin /addfile tableaujob https://www.tableau.com/downloads/desktop/pc64/TableauDesktop-64bit-2019-3-0.exe TableauDesktop-64bit-2019-3-0.exe
-  - pwsh -c 'WebRequest -Uri https://www.tableau.com/downloads/desktop/pc64/TableauDesktop-64bit-2019-3-0.exe -OutFile TableauDesktop-64bit-2019-3-0.exe'
+  - pwsh -c 'Invoke-WebRequest -Uri https://www.tableau.com/downloads/desktop/pc64/TableauDesktop-64bit-2019-3-0.exe -OutFile TableauDesktop-64bit-2019-3-0.exe'
   - Get-Path
   - pwd
-  -  
+  - Invoke-WebRequest -Uri https://www.tableau.com/downloads/desktop/pc64/TableauDesktop-64bit-2019-3-0.exe -OutFile TableauDesktop-64bit-2019-3-0.exe
+  - src/helper-scripts/powershell-test.ps1
 # databricks test
   #- psql -c '\l' -U postgres
   #- python /Users/travis/build/peterhyvonen/OSXtesting/rootpathfix.py
