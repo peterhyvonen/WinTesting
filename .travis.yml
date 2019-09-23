@@ -15,16 +15,13 @@ script:
   - python -3 -m pip list
 # download tableau desktop
   #bitsadmin /addfile thisissomejobname http://kakao.ro/Pictures.iso C:\john_pictures.iso
-  - bitsadmin /addfile tableaujob https://www.tableau.com/downloads/desktop/pc64/TableauDesktop-64bit-2019-3-0.exe TableauDesktop-64bit-2019-3-0.exe
+  #- bitsadmin /addfile tableaujob https://www.tableau.com/downloads/desktop/pc64/TableauDesktop-64bit-2019-3-0.exe TableauDesktop-64bit-2019-3-0.exe
+  - Invoke-WebRequest -Uri https://www.tableau.com/downloads/desktop/pc64/TableauDesktop-64bit-2019-3-0.exe -OutFile TableauDesktop-64bit-2019-3-0.exe
   - dir
   - pwd
 # databricks test
   #- psql -c '\l' -U postgres
   #- python /Users/travis/build/peterhyvonen/OSXtesting/rootpathfix.py
-  #- cat /Users/travis/build/peterhyvonen/OSXtesting/connector-plugin-sdk/tests/datasets/TestV1/postgres/load_batters.sql  
-  #- cat /Users/travis/build/peterhyvonen/OSXtesting/connector-plugin-sdk/tests/datasets/TestV1/postgres/load_calcs.sql
-  #- cat /Users/travis/build/peterhyvonen/OSXtesting/connector-plugin-sdk/tests/datasets/TestV1/postgres/load_staples.sql
-  #- cat config/tdvt/tdvt_override.ini
   #- python3 -m tdvt.tdvt -h
   #- python3 -m tdvt.tdvt --run postgres_generic_example
   #- python3 -m tdvt.tdvt --run postgres_generic_example -e
