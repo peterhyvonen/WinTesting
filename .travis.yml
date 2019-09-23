@@ -1,8 +1,5 @@
 os: windows
-language: powershell
-#install:
-#before_script:
- # - 
+language: python
 script:
   - python --version
   - python3 --version
