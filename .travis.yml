@@ -4,6 +4,7 @@ script:
 # test and setup Python
   - python --version
   - choco install python3 --pre 
+  - refreshenv
   - python3 --version
 # clone and install connector plugin
   - git clone https://github.com/tableau/connector-plugin-sdk.git
@@ -13,13 +14,10 @@ script:
   #- python -3 -m pip install -e .
   #- python -3 -m pip list
 # download tableau desktop
-  - pwsh -c 'Invoke-WebRequest -Uri https://www.tableau.com/downloads/desktop/pc64/TableauDesktop-64bit-2019-3-0.exe -OutFile TableauDesktop-64bit-2019-3-0.exe'
-  - Get-Path
   - pwd
-  - Invoke-WebRequest -Uri https://www.tableau.com/downloads/desktop/pc64/TableauDesktop-64bit-2019-3-0.exe -OutFile TableauDesktop-64bit-2019-3-0.exe
-  - src/helper-scripts/powershell-test.ps1
   - powershell src/helper-scripts/powershell-test.ps1
-  - powershell 'nvoke-WebRequest -Uri https://www.tableau.com/downloads/desktop/pc64/TableauDesktop-64bit-2019-3-0.exe -OutFile TableauDesktop-64bit-2019-3-0.exe'
+  - powershell 'Invoke-WebRequest -Uri https://www.tableau.com/downloads/desktop/pc64/TableauDesktop-64bit-2019-3-0.exe -OutFile TableauDesktop-64bit-2019-3-0.exe'
+  - dir
 # databricks test
   #- psql -c '\l' -U postgres
   #- python /Users/travis/build/peterhyvonen/OSXtesting/rootpathfix.py
