@@ -1,6 +1,5 @@
 os: windows
-sudo: false
-package: powershell
+language: powershell
 #install:
 #before_script:
  # - 
