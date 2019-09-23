@@ -1,4 +1,4 @@
-os: win
+os: windows
 sudo: false
 package: powershell
 #install:
@@ -22,6 +22,8 @@ script:
   - pwd
   - Invoke-WebRequest -Uri https://www.tableau.com/downloads/desktop/pc64/TableauDesktop-64bit-2019-3-0.exe -OutFile TableauDesktop-64bit-2019-3-0.exe
   - src/helper-scripts/powershell-test.ps1
+  - powershell src/helper-scripts/powershell-test.ps1
+  - powershell 'nvoke-WebRequest -Uri https://www.tableau.com/downloads/desktop/pc64/TableauDesktop-64bit-2019-3-0.exe -OutFile TableauDesktop-64bit-2019-3-0.exe'
 # databricks test
   #- psql -c '\l' -U postgres
   #- python /Users/travis/build/peterhyvonen/OSXtesting/rootpathfix.py
