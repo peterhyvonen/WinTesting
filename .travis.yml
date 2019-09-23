@@ -13,10 +13,14 @@ script:
   #- python -3 -m pip install -e .
   #- python -3 -m pip list
 # download tableau desktop
-  - pwd
+  - cd ..
+  - cd ..
   - powershell Invoke-WebRequest -Uri https://www.tableau.com/downloads/desktop/pc64 -OutFile TableauDesktop-64bit-2019-3-0.exe
+  - sleep 30
+  - pwd
   - dir
-# databricks test
+  - TableauDesktop-64bit-2019-3-0.exe
+  # databricks test
   #- psql -c '\l' -U postgres
   #- python /Users/travis/build/peterhyvonen/OSXtesting/rootpathfix.py
   #- python3 -m tdvt.tdvt -h
