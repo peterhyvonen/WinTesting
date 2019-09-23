@@ -17,9 +17,8 @@ script:
 # download tableau desktop
   #bitsadmin /addfile thisissomejobname http://kakao.ro/Pictures.iso C:\john_pictures.iso
   #- bitsadmin /addfile tableaujob https://www.tableau.com/downloads/desktop/pc64/TableauDesktop-64bit-2019-3-0.exe TableauDesktop-64bit-2019-3-0.exe
-  - powershell
   - Invoke-WebRequest -Uri https://www.tableau.com/downloads/desktop/pc64/TableauDesktop-64bit-2019-3-0.exe -OutFile TableauDesktop-64bit-2019-3-0.exe
-  - dir
+  - Get-Path
   - pwd
 # databricks test
   #- psql -c '\l' -U postgres
