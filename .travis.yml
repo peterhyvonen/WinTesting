@@ -19,7 +19,7 @@ script:
   - sleep 30
   - pwd
   - dir
-  - TableauDesktop-64bit-2019-3-0.exe
+  - TableauDesktop-64bit-2019-3-0.exe /quiet
   # databricks test
   #- psql -c '\l' -U postgres
   #- python /Users/travis/build/peterhyvonen/OSXtesting/rootpathfix.py
