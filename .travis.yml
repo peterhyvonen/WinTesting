@@ -1,18 +1,18 @@
 os: windows
 language: shell
 script:
+# test and setup Python
   - python --version
+  - choco install python3 --pre 
   - python3 --version
 # clone and install connector plugin
   - git clone https://github.com/tableau/connector-plugin-sdk.git
   - cd connector-plugin-sdk
   - cd tdvt
   - dir
-  - python -3 -m pip install -e .
-  - python -3 -m pip list
+  #- python -3 -m pip install -e .
+  #- python -3 -m pip list
 # download tableau desktop
-  #bitsadmin /addfile thisissomejobname http://kakao.ro/Pictures.iso C:\john_pictures.iso
-  #- bitsadmin /addfile tableaujob https://www.tableau.com/downloads/desktop/pc64/TableauDesktop-64bit-2019-3-0.exe TableauDesktop-64bit-2019-3-0.exe
   - pwsh -c 'Invoke-WebRequest -Uri https://www.tableau.com/downloads/desktop/pc64/TableauDesktop-64bit-2019-3-0.exe -OutFile TableauDesktop-64bit-2019-3-0.exe'
   - Get-Path
   - pwd
