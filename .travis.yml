@@ -3,7 +3,7 @@ language: shell
 script:
 # test and setup Python
   - python --version
-  - choco install python3 --params "/InstallDir:C:\Program Files"
+  - choco install python3 --params "/InstallDir:C:\Program Files\Python38"
   - pwd
   - cd ..
   - cd ..
@@ -19,9 +19,9 @@ script:
   #- cd connector-plugin-sdk
   #- cd tdvt
   - dir "C:\Program Files\Python38"
-  - C:\Program Files\Python38\python3.exe -m pip install -e .
-  - cmd /c 'python3 easy_install pip3'
-  - cmd /c 'python -3 -m pip list'
+  - C:\Program Files\Python38\python.exe -m pip install -e .
+  - cmd /c 'C:\Program Files\Python38\python easy_install pip3'
+  - cmd /c 'C:\Program Files\Python38\python -3 -m pip list'
 # download tableau desktop
   - cd ..
   - cd ..
