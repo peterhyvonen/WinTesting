@@ -4,12 +4,14 @@ script:
 # test and setup Python
   - python --version
   - choco install python3 --pre 
-  - dir
 # clone and install connector plugin
   - git clone https://github.com/tableau/connector-plugin-sdk.git
   - cd connector-plugin-sdk
   - cd tdvt
-  - dir
+  - pwd
+  - python3
+  - dir 'c/Program Files/Chocolatey/bin'
+  - dir 'C:\Program Files\Chocolatey\bin'
   #- python -3 -m pip install -e .
   #- python -3 -m pip list
 # download tableau desktop
