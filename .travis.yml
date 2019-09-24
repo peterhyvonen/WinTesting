@@ -9,7 +9,7 @@ script:
   - cd connector-plugin-sdk
   - cd tdvt
   - dir "C:\Program Files"
-  - "C:\Program Files\python3.exe" -m pip install -e .
+  - "C/Program Files/python3.exe" -m pip install -e .
   - python -3 -m pip list
 # download tableau desktop
   - cd ..
