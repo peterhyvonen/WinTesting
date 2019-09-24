@@ -9,6 +9,10 @@ script:
   - cd ..
   - cd ..
   - cd ..
+  - cd ..
+  - pwd
+  - cd "Program Files"
+  - dir
   - pwd
 # clone and install connector plugin
   - git clone https://github.com/tableau/connector-plugin-sdk.git
