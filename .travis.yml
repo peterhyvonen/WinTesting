@@ -29,8 +29,7 @@ script:
   - sleep 300
   - pwd
   - sleep 300
-  - dir
-  - sleep 300
+  - ls -l
   - .\TableauDesktop-64bit-2019-3-0.exe /quiet
   # databricks test
   #- psql -c '\l' -U postgres
