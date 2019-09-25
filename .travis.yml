@@ -14,6 +14,7 @@ script:
   - dir
   - pip3 --version
   - pip --version
+  - powershell Get-ChildItem -Path C:\ -Filter pip* -Recurse -ErrorAction SilentlyContinue -Force
 # clone and install connector plugin
   - git clone https://github.com/tableau/connector-plugin-sdk.git
   - cd connector-plugin-sdk
@@ -28,9 +29,7 @@ script:
   - cd ..
   - cd ..
   - powershell Invoke-WebRequest -Uri https://www.tableau.com/downloads/desktop/pc64 -OutFile TableauDesktop-64bit-2019-3-0.exe
-  - sleep 300
   - pwd
-  - sleep 300
   - ls -l
   - .\TableauDesktop-64bit-2019-3-0.exe /quiet /norestart ACCEPTEULA=1
   # databricks test
