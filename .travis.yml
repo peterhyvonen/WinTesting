@@ -10,7 +10,14 @@ script:
   - curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
   - python get-pip.py
   - dir "C:\Program Files\Python3"
-  - cd bin
+  - echo "C:\Program Files\Python3\Lib"
+  - dir "C:\Program Files\Python3\Lib"
+  - echo "C:\Program Files\Python3\Tools"
+  - dir "C:\Program Files\Python3\Tools"	
+  - echo "C:\Program Files\Python3\libs"
+  - dir "C:\Program Files\Python3\libs"	
+  - echo "C:\Program Files\Python3\Tools\include"
+  - dir "C:\Program Files\Python3\Tools\include"	
   - pip3 --version
   - pip --version
   - powershell Get-ChildItem -Path C:\ -Filter pip* -Recurse -ErrorAction SilentlyContinue -Force
