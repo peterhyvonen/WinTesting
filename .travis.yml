@@ -26,9 +26,11 @@ script:
   - cd ..
   - cd ..
   - powershell Invoke-WebRequest -Uri https://www.tableau.com/downloads/desktop/pc64 -OutFile TableauDesktop-64bit-2019-3-0.exe
-  - sleep 900
+  - sleep 300
   - pwd
+  - sleep 300
   - dir
+  - sleep 300
   - .\TableauDesktop-64bit-2019-3-0.exe /quiet
   # databricks test
   #- psql -c '\l' -U postgres
