@@ -3,7 +3,7 @@ language: shell
 script:
 # test and setup Python
   - python --version
-  - choco install python3 --params "/InstallDir:C:\Program Files\Python38"
+  - choco install python3 --params "/InstallDir:C:\Program Files\Python3"
   - pwd
   - export "PATH=/C/Program Files/Python3:$PATH"
   - python --version
