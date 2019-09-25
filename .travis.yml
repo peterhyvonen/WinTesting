@@ -4,14 +4,13 @@ script:
 # test and setup Python
   - python --version
   - choco install python3 --params "/InstallDir:C:\Program Files\Python3"
-  - dir "C:\Program Files\Python3"
-  - dir
   - pwd
   - export "PATH=/C/Program Files/Python3:$PATH"
   - python --version
   - curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
   - python get-pip.py
-  - dir
+  - dir "C:\Program Files\Python3"
+  - cd bin
   - pip3 --version
   - pip --version
   - powershell Get-ChildItem -Path C:\ -Filter pip* -Recurse -ErrorAction SilentlyContinue -Force
