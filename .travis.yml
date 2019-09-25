@@ -12,6 +12,8 @@ script:
   - curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
   - python get-pip.py
   - dir
+  - pip3 --version
+  - pip --version
 # clone and install connector plugin
   - git clone https://github.com/tableau/connector-plugin-sdk.git
   - cd connector-plugin-sdk
@@ -30,7 +32,7 @@ script:
   - pwd
   - sleep 300
   - ls -l
-  - .\TableauDesktop-64bit-2019-3-0.exe /quiet
+  - .\TableauDesktop-64bit-2019-3-0.exe /quiet /norestart ACCEPTEULA=1
   # databricks test
   #- psql -c '\l' -U postgres
   #- python /Users/travis/build/peterhyvonen/OSXtesting/rootpathfix.py
