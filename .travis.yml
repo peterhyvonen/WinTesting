@@ -5,16 +5,16 @@ script:
   - python --version
   - choco install python3 --params "/InstallDir:C:\Program Files\Python38"
   - pwd
-  - ./'C:\Program Files\Python38\python --version'
+  - ./'C:\Program Files\Python38\python.exe --version'
 # clone and install connector plugin
   - git clone https://github.com/tableau/connector-plugin-sdk.git
   - cd connector-plugin-sdk
   - cd tdvt
   - dir "C:\Program Files\Python38"
-  - ./'C:\Program Files\Python38\python easy_install pip3'
+  - ./'C:\Program Files\Python38\python.exe easy_install pip3'
   - sleep 30
   - ./'C:\Program Files\Python38\python.exe -m pip install -e .'
-  - ./'C:\Program Files\Python38\python -3 -m pip list'
+  - ./'C:\Program Files\Python38\python.exe -3 -m pip list'
 # download tableau desktop
   - cd ..
   - cd ..
