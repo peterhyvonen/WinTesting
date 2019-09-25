@@ -14,10 +14,8 @@ script:
   - dir "C:\Program Files\Python3\Lib"
   - echo "C:\Program Files\Python3\Tools"
   - dir "C:\Program Files\Python3\Tools"	
-  - echo "C:\Program Files\Python3\libs"
-  - dir "C:\Program Files\Python3\libs"	
-  - echo "C:\Program Files\Python3\Tools\include"
-  - dir "C:\Program Files\Python3\Tools\include"	
+  - echo "C:\Program Files\Python3\Scripts"
+  - dir "C:\Program Files\Python3\Scripts"		
   - pip3 --version
   - pip --version
   - powershell Get-ChildItem -Path C:\ -Filter pip* -Recurse -ErrorAction SilentlyContinue -Force
