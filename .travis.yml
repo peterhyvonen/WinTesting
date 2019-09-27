@@ -18,8 +18,11 @@ script:
   - git clone https://github.com/tableau/connector-plugin-sdk.git
   - cd connector-plugin-sdk
   - cd tdvt
+  - pwd
   - py -3 setup.py sdist --formats gztar
   - sleep 30
+  - pwd
+  - cd tdvt
   - dir
   - py -3 -m pip install tdvt-1.5.21.zip
   - sleep 30
