@@ -8,17 +8,13 @@ script:
   - export "PATH=/C/Program Files/Python3:$PATH"
   - python --version
   - curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-  - python get-pip.py
-  - dir "C:\Program Files\Python3"
-  - echo "C:\Program Files\Python3\Lib"
-  - dir "C:\Program Files\Python3\Lib"
-  - echo "C:\Program Files\Python3\Tools"
-  - dir "C:\Program Files\Python3\Tools"	
+  - python get-pip.py	
   - echo "C:\Program Files\Python3\Scripts"
-  - dir "C:\Program Files\Python3\Scripts"		
+  - dir "C:\Program Files\Python3\Scripts"
+  - powershell Get-ChildItem -Path C:\ -Filter pip* -Recurse -ErrorAction SilentlyContinue -Force
+  - export "PATH=/C/Program Files/Python3/Scripts:$PATH"
   - pip3 --version
   - pip --version
-  - powershell Get-ChildItem -Path C:\ -Filter pip* -Recurse -ErrorAction SilentlyContinue -Force
 # clone and install connector plugin
   - git clone https://github.com/tableau/connector-plugin-sdk.git
   - cd connector-plugin-sdk
