@@ -4,15 +4,12 @@ script:
 # test and setup Python
   - python --version
   - choco install python3 --params "/InstallDir:C:\Program Files\Python3"
-  - pwd
-  - export "PATH=/C/Program Files/Python3:$PATH"
-  - python --version
   - curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
   - python get-pip.py	
-  - echo "C:\Program Files\Python3\Scripts"
-  - dir "C:\Program Files\Python3\Scripts"
-  - powershell Get-ChildItem -Path C:\ -Filter pip* -Recurse -ErrorAction SilentlyContinue -Force
+  - export "PATH=/C/Program Files/Python3:$PATH"
   - export "PATH=/C/Program Files/Python3/Scripts:$PATH"
+  - python3 --version
+  - python --version
   - pip3 --version
   - pip --version
 # clone and install connector plugin
@@ -21,8 +18,8 @@ script:
   - cd tdvt
   - dir
   - py -3 setup.py sdist --formats gztar
-  - py -3 -m pip install tdvt-1.1.59.zip
-  - python -3 -m pip install -e
+  - py -3 -m pip install tdvt-1.5.21.zip
+  #- python -3 -m pip install -e
   - python -3 -m pip list
   - sleep 10
 # download tableau desktop
