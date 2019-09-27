@@ -4,7 +4,9 @@ script:
 # test and setup Python
   - python --version
   - choco install python3 --params "/InstallDir:C:\Program Files\Python3"
+  - sleep 30
   - curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+  - sleep 30
   - python get-pip.py	
   - export "PATH=/C/Program Files/Python3:$PATH"
   - export "PATH=/C/Program Files/Python3/Scripts:$PATH"
@@ -16,12 +18,13 @@ script:
   - git clone https://github.com/tableau/connector-plugin-sdk.git
   - cd connector-plugin-sdk
   - cd tdvt
-  - dir
   - py -3 setup.py sdist --formats gztar
+  - sleep 30
+  - dir
   - py -3 -m pip install tdvt-1.5.21.zip
+  - sleep 30
   #- python -3 -m pip install -e
   - python -3 -m pip list
-  - sleep 10
 # download tableau desktop
   - cd ..
   - cd ..
